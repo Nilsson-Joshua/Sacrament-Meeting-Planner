@@ -1,0 +1,245 @@
+﻿@model IEnumerable<SacramentMeetingPlanner.Models.Planner>
+
+@{
+    ViewData["Title"] = "Planner";
+}
+
+<h2>Sacrament Meeting Planner</h2>
+
+<p>
+    <a asp-action="Create">Create New</a> |
+    @foreach (var item in Model)
+    {
+        <a asp-action="Details" asp-route-id="@item.ID">Details</a>
+    }
+    |
+    @foreach (var item in Model)
+    {
+        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+    }
+</p>
+
+<table class="table">
+    <tr>
+        @foreach (var item in Model)
+        {
+            <th id="current-date">
+                @Html.DisplayFor(modelItem => item.Date)
+            </th>
+            <td></td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+            </td>
+}
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Presiding)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.Presiding)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+            </td>
+        }
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Conducting)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.Conducting)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+            </td>
+        }
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OpeningHymn)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.OpeningHymn)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+            </td>
+        }
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Invocation)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.Invocation)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+            </td>
+        }
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SacramentHymn)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.SacramentHymn)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+            </td>
+        }
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SacramentPrayer)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.SacramentPrayer)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+            </td>
+        }
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SpeakerOne)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.SpeakerOne)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+            </td>
+        }
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TopicOne)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.TopicOne)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+            </td>
+        }
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SpeakerTwo)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.SpeakerTwo)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+            </td>
+        }
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TopicTwo)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.TopicTwo)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+            </td>
+        }
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SpeakerThree)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.SpeakerThree)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+            </td>
+        }
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TopicThree)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.TopicThree)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+            </td>
+        }
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ClosingHymn)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.ClosingHymn)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+            </td>
+        }
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Benediction)
+        </th>
+        @foreach (var item in Model)
+        {
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Benediction)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+            </td>
+        }
+    </tr>
+</table>

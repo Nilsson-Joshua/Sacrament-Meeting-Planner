@@ -1,6 +1,43 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #f2f1e3;
+    font-family: "Work Sans";
+}
+
+nav, h1, h2, h3, h4 {
+    font-family: Oswald;
+}
+
+#navigation {
+    background-color: #3C4D71;
+}
+
+#navigation a {
+    color: white;
+}
+
+#navigation a:hover {
+    color: #c1c1c1
+}
+
+#current-date, #current-date ~ td {
+    border-top: none;
+}
+
+#current-date {
+    color: #3C4D71;
+    font-weight: bolder;
+    font-size: 175%;
+}
+
+#current-date ~ td a {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+tr:hover {
+    background-color: #e8e8e8;
 }
 
 /* Wrapping element */

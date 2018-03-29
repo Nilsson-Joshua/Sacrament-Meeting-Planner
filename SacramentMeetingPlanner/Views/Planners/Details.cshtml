@@ -1,0 +1,108 @@
+﻿@model SacramentMeetingPlanner.Models.Planner
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sacrament Meeting Planner</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Presiding)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Presiding)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Conducting)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Conducting)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OpeningHymn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OpeningHymn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Invocation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Invocation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SacramentHymn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SacramentHymn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SacramentPrayer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SacramentPrayer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SpeakerOne)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SpeakerOne)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TopicOne)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TopicOne)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SpeakerTwo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SpeakerTwo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TopicTwo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TopicTwo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SpeakerThree)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SpeakerThree)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TopicThree)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TopicThree)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ClosingHymn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClosingHymn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Benediction)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Benediction)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
