@@ -19,9 +19,17 @@ namespace SacramentMeetingPlanner.Controllers
         }
 
         // GET: Planners
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(DateTime? dateFrom, DateTime? dateTo)
         {
-            return View(await _context.Planner.ToListAsync());
+            IQueryable<Planner> planners = _context.Planner;
+            if (!dateFrom.HasValue || !dateTo.HasValue)
+            {
+                var today = DateTime.Today;
+                dateFrom = new DateTime(today.Year, today.Month, 1);
+                dateTo = new DateTime(today.Year, today.Month, DateTime.DaysInMonth(today.Year, today.Month));
+            }
+            planners = planners.Where(p => p.Date >= dateFrom && p.Date <= dateTo);    
+            return View(await planners.ToListAsync<Planner>());
         }
 
         // GET: Planners/Details/5
